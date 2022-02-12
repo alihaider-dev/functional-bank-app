@@ -38,15 +38,15 @@
     <main class="container">
       <div class="row balance-report">
         <div class="col-md-6">
-          <div class="row gap-3">
+          <div class="row gap-3 text-uppercase">
             <div class="col-md-12 deposit bg-light shadow-sm p-3 rounded">
               <div class="d-flex gap-4 align-items-center">
                 <div class="icon display-5">
                   <i class="fa-solid fa-coins"></i>
                 </div>
                 <div class="info">
-                  <h5>Total Deposti</h5>
-                  <h2>BDT <span>0</span></h2>
+                  <h5>Total Deposit</h5>
+                  <h2>BDT <span id="deposit-balance">0</span></h2>
                 </div>
               </div>
             </div>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="info">
                   <h5>Total Withdraw</h5>
-                  <h2>BDT <span>0</span></h2>
+                  <h2>BDT <span id="withdraw-balance">0</span></h2>
                 </div>
               </div>
             </div>
@@ -68,13 +68,49 @@
                 </div>
                 <div class="info">
                   <h5>Total Balance</h5>
-                  <h2>BDT <span>0</span></h2>
+                  <h2>BDT <span id="total-balance">0</span></h2>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6">a</div>
+        <!-- Transaction Field -->
+        <div class="col-md-6 d-grid align-items-center">
+          <div class="row gap-5">
+            <div class="input-group flex-nowrap col-md12">
+              <span class="input-group-text">$</span>
+              <input
+                id="deposit-input"
+                type="text"
+                class="form-control p-3"
+                placeholder="Deposit Amount"
+                aria-label="Deposit"
+                aria-describedby="addon-wrapping"
+              />
+              <button class="btn btn-success" type="button" id="btn-deposit">
+                Deposti
+              </button>
+            </div>
+            <div class="input-group flex-nowrap col-md12">
+              <span class="input-group-text">$</span>
+              <input
+                id="withdraw-input"
+                type="text"
+                class="form-control p-3"
+                placeholder="Withdraw Amount"
+                aria-label="Withdraw"
+                aria-describedby="addon-wrapping"
+              />
+              <button
+                class="btn btn-info btn-withdraw"
+                type="button"
+                id="btn-withdraw"
+              >
+                Withdraw
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 

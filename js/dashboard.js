@@ -11,6 +11,9 @@ document.getElementById('btn-deposit').addEventListener('click', function () {
   const convertHistoryValue = parseFloat(historyValue);
   history.innerText = convertValue + convertHistoryValue;
 
+  // Clear Value
+  targetInput.value = "";
+
   // Update Total Balance
   const totalBalance = document.getElementById('total-balance');
   const totalBalanceValue = totalBalance.innerText;
@@ -30,6 +33,9 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
   const historyValue = history.innerText;
   const convertHistoryValue = parseFloat(historyValue);
   history.innerText = convertValue + convertHistoryValue;
+
+  // Clear Value
+  targetInput.value = "";
 
   // Update Total Balance
   const totalBalance = document.getElementById('total-balance');
